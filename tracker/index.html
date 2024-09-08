@@ -1,1 +1,75 @@
-<h1>Kalender</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.Wochentage {
+  /*Style Kalenderblatt ("Hintergrund"*/
+  display: grid;
+  height: 200px;
+  width: 205px;
+  gap: 5px;
+  padding:5px;
+  justify-content: start;
+  grid-template-columns: repeat(7, 25px);
+  grid-template-rows: repeat(6, 25px);
+  background-color: rgba(555,255,588, 0.8); /*Farbe Kalenderblatt*/
+  font-family:monospace;
+}
+.weekday-header {
+  /*Style Wochentagsheader*/
+  display: grid;
+  gap: 5px;
+  padding:5px;
+  justify-content: start;
+  grid-template-columns: repeat(7, 25px);
+  grid-template-rows: repeat(6, 25px);
+  background-color:#f2f3f1; 
+  font-family:monospace;
+  color: #091201;
+  border-radius: 6px;
+}
+.day {
+  /*Style Kalendertage*/
+  background-color:#f2f3f1 ;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 0.9em;
+  color: #cfd5c9;
+  text-align:center;
+}
+Button {
+  border: none;
+  border-radius: 6px;
+  padding: 5px;
+  margin-left: 5px;
+  font-family: monospace;
+  font-size: 1em;
+}
+
+
+</style>
+</head>
+<body>
+<button onclick="habit_done()">Do Habit</button>
+
+
+<div id="calendar">
+  <div class="Wochentage" id="days-container">
+    <div class="weekday-header"> Mo </div>
+    <div class="weekday-header"> Di </div>
+    <div class="weekday-header"> Mi </div>
+    <div class="weekday-header"> Do </div>
+    <div class="weekday-header"> Fr </div>
+    <div class="weekday-header"> Sa </div>
+    <div class="weekday-header"> So </div>
+  </div>
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
