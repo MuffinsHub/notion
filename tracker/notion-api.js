@@ -38,7 +38,7 @@ async function habitDone(date) {
 }
 
 // Verwende den Button, um die Funktion auszuführen
-document.getElementById("habit_done").addEventListener("click", function() {
+document.getElementById("habitButton").addEventListener("click", function() {
     const today = new Date();
     habitDone(today);
 });
