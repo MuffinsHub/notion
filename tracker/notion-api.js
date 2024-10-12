@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Dieser Code wird ausgeführt, sobald das DOM vollständig geladen ist
+    const button = document.getElementById('habitButton');
+
+    if (button) {
+        button.addEventListener('click', function() {
+            console.log("Button clicked!");
+            // Hier kannst du die Funktionalität hinzufügen
+        });
+    } else {
+        console.error("Button element not found.");
+    }
+});
+
 // Beispiel für die Verwendung der Notion API in deinem Script
 const notionToken = "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";
 const databaseId = "11dd2b6860e7803fafead5ff46bf098f";
