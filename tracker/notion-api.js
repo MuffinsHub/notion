@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (button) {
         button.addEventListener('click', function() {
             console.log("Button clicked!");
-            // Hier kannst du die Funktionalität hinzufügen
+            const today = new Date();
+            habitDone(today);  // Hier wird die API-Funktion aufgerufen
         });
     } else {
         console.error("Button element not found.");
@@ -36,11 +37,4 @@ async function habitDone(date) {
     const data = await response.json();
     console.log("Habit done on:", date, "Response:", data);
 }
-
-// Verwende den Button, um die Funktion auszuführen
-document.getElementById("habitButton").addEventListener("click", function() {
-    const today = new Date();
-    habitDone(today);
-});
-
 
